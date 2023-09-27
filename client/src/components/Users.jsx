@@ -13,9 +13,9 @@ const Users = () => {
 
     const handleDelete = (id) =>{
         axios.delete('http://localhost:3001/deleteUser/'+id)
-        .then(res => {console.log(res)
-            window.location.reload()})
+        .then(res => {console.log(res)})
         .catch(errr => console.log(errr))
+        window.location.reload(true)
     }
   return (
     <div className='d-flex vh-100 bg-primary justify-content-center align-items-center'>
@@ -42,7 +42,6 @@ const Users = () => {
                                     <button className='btn btn-danger' onClick={(e) => handleDelete(user._id)}>Delete</button>
                                 </td>
                             </tr>
-                          
                         })
                     }
                 </tbody>

@@ -14,7 +14,7 @@ app.listen(3001, () =>{
 
 
 //Database Connection
-mongoose.connect("mongodb://127.0.0.1:27017/crud")
+mongoose.connect("mongodb+srv://lipheria:samurott@cluster0.bbpwnrj.mongodb.net/plantidb?retryWrites=true&w=majority")
 
 app.post("/createUser", (req, res) =>{
     UserModel.create(req.body)
